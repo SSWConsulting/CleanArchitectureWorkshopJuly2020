@@ -3,15 +3,21 @@ using CaWorkshop.Application.Common.Interfaces;
 using CaWorkshop.Domain.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace CaWorkshop.Application.TodoLists.Commands.DeleteTodoList
 {
-    public class DeleteTodoListCommand : IRequest
+    public class DeleteTodoListCommand : IRequest, IDisposable
     {
         public int Id { get; set; }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public class DeleteTodoListCommandHandler

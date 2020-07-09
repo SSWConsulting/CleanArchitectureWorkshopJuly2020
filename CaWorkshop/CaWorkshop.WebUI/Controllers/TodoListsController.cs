@@ -1,5 +1,5 @@
 using CaWorkshop.Domain.Entities;
-using CaWorkshop.WebUI.Data;
+using CaWorkshop.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;

@@ -11,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 using NSwag.Generation.Processors.Security;
 using NSwag;
 using System.Linq;
+using Microsoft.Extensions.Logging;
 
 namespace CaWorkshop.WebUI
 {
@@ -56,6 +57,8 @@ namespace CaWorkshop.WebUI
 
                 configure.OperationProcessors.Add(new AspNetCoreOperationSecurityScopeProcessor("JWT"));
             });
+
+            services.AddLogging(builder => builder.AddSeq());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -292,7 +292,7 @@
         "tags": [
           "WeatherForecast"
         ],
-        "operationId": "WeatherForecast_Get",
+        "operationId": "WeatherForecast_GetAbc",
         "responses": {
           "200": {
             "description": "",
